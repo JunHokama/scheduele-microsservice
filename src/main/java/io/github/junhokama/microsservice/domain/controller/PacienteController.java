@@ -22,6 +22,8 @@ public class PacienteController {
     public ResponseEntity<Paciente> salvar (@RequestBody Paciente paciente){
         Paciente savedPaciente = service.save(paciente);
         return ResponseEntity.status(HttpStatus.CREATED).body(savedPaciente);
+
+        // Outro método possíveo: return ResponseEntity.ok(savedPaciente);
     }
 
     @GetMapping("/list")
